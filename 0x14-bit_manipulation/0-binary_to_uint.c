@@ -1,32 +1,25 @@
-#include "holberton.h"
-#include <stdio.h>
+#include "main.h"
 
 /**
  * binary_to_uint - binary to number
- * @b: b
- *
- * Return: int
- */
+ * @b: char
+ * Return int
+*/
+
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num, i;
+int i;
+unsigned int nuber = 0;
 
-	if (!b || !*b)
-		return (0);
+if (!b)
+return (0);
 
-	num = i = 0;
-	while (b[i])
-	{
-		if (b[i] > 49)
-			return (0);
-		else if (b[i] == 49)
-		{
-			num <<= 1;
-			num += 1;
-		}
-		else
-			num <<= 1;
-		i++;
-	}
-	return (num);
+for (i = 0; b[i]; i++)
+{
+if (b[i] < '0' || b[i] > '1')
+return (0);
+nuber = 2 * nuber + (b[i] - '0');
+}
+
+return (nuber);
 }
