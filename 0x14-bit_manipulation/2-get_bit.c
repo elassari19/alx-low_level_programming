@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * get_bit - get byt
- * @n: number
+ * get_bit - get bits
+ * @n: num
  * @index: index
  *
  * Return: int
