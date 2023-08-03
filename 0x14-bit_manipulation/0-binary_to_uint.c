@@ -1,10 +1,10 @@
-#include main.h
+#include "main.h"
 
 /**
- * binary_to_uint - binary to uint
- * @b: b
+ * binary_to_uint - convert binary to number
+ * @b: binary
  *
- * Return int
+ * Return unsigned int
 */
 
 unsigned int binary_to_uint(const char *b)
@@ -12,6 +12,7 @@ unsigned int binary_to_uint(const char *b)
 int i;
 unsigned int nuber = 0;
 
+if (!b)
 return (0);
 
 for (i = 0; b[i]; i++)
@@ -23,4 +24,3 @@ nuber = 2 * nuber + (b[i] - '0');
 
 return (nuber);
 }
-
