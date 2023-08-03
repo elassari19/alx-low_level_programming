@@ -23,4 +23,3 @@ nuber = 2 * nuber + (b[i] - '0');
 
 return (nuber);
 }
-
