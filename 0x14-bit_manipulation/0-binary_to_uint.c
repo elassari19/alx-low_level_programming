@@ -3,7 +3,6 @@
 /**
  * binary_to_uint - binary to number
  * @b: binary
- *
  * Return unsigned int
 */
 
