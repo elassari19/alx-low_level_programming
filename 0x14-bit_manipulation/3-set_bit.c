@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * set_bit - sets a bit
- * @n: number
+ * set_bit - sets bit
+ * @n: num
  * @index: index
- *
  * Return: number
  */
 int set_bit(unsigned long int *n, unsigned int index)
