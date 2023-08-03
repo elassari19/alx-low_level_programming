@@ -2,7 +2,7 @@
 
 /**
  * get_endianness - get endianness
- * Return: number
+ * Return: int
  */
 
 int get_endianness(void)
