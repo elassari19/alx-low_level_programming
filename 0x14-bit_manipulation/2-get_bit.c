@@ -1,9 +1,9 @@
-#include main.h
+#include "main.h"
 
 /**
- * get_bit - get byt
- * @n: number
- * @index: index
+ * get_bit - get biy
+ * @n: num
+ * @index: indexe
  *
  * Return: int
  */
