@@ -2,8 +2,7 @@
 
 /**
  * print_binary - print binary
- *
- * @n: number
+ * @n: num
  */
 
 void print_binary(unsigned long int n)
@@ -25,3 +24,4 @@ _putchar('0');
 }
 if (!counter)
 _putchar('0');
+}
