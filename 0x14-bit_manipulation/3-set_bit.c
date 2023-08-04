@@ -3,7 +3,7 @@
 /**
  * set_bit - sets bit
  * @n: num
- * @index: index 
+ * @index: index
  * Return: int
  */
 
