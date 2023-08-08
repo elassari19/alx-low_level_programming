@@ -1,28 +1,33 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * read_textfile - read text
+ * read_textfile- Read text file
  * @filename: file name
  * @letters: letters
- * Return: ssize_t
-*/
+ * Return: ssize t
+ */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
+        char *buf;
+        ssize_t fd;
+        ssize_t w;
+        ssize_t t;
 
-char *bufferStr;
-ssize_t _file, _read, _writh;
+        fd = open(filename, O_RDONLY);
 
-_file = open(filename, O_RDONLY);
-if (_file == -1)
-return (0);
+        if (fd == -1)
+                return (0);
 
-bufferStr = malloc(sizeof(char) * letters);
-_read = read(_file, bufferStr, letters);
-_writh = write(STDOUT_FILENO, bufferStr, _read);
+        buf = malloc(sizeof(char) * letters);
+        t = read(fd, buf, letters);
+        w = write(STDOUT_FILENO, buf, t);
 
-free(bufferStr);
-close(_file);
-return (_writh);
+        free(buf);
+
+        close(fd);
+
+        return (w);
+
+}
