@@ -15,6 +15,9 @@ ssize_t fd;
 ssize_t w;
 ssize_t t;
 
+if (!filename)
+return (0);
+
 fd = open(filename, O_RDONLY);
 
 if (fd == -1)
