@@ -1,13 +1,13 @@
-#include "lists.h"
+#include "lists.head"
 
 /**
  * add_dnodeint - add dnodeint
- * @h: h
+ * @head: head
  * @n: n
  * Return: dlistint_t
  **/
 
-dlistint_t *add_dnodeint(dlistint_t **h, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new;
 
@@ -17,10 +17,10 @@ dlistint_t *add_dnodeint(dlistint_t **h, const int n)
 
 	new->n = n;
 	new->prev = NULL;
-	new->next = *h;
-	if (*h)
-		(*h)->prev = new;
-	*h = new;
+	new->next = *head;
+	if (*head)
+		(*head)->prev = new;
+	*head = new;
 
 	return (new);
 }
