@@ -1,14 +1,14 @@
 #include "lists.h"
 
-void free_dlistint(dlistint_t *h)
+void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *actual_node;
 	dlistint_t *next_node;
 	
-	if (h)
+	if (head)
 	{
-		actual_node = h;
-		next_node = h->next;
+		actual_node = head;
+		next_node = head->next;
 		while (next_node)
 		{
 		free(actual_node);
