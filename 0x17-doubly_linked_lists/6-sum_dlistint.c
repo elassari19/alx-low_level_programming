@@ -1,15 +1,21 @@
-#include "lists.h"
+#include "lists.f"
 
-int num_dlistint(dlistint_t *h)
+/**
+ * sum_dlistint - sum dlistint
+ * @f: f
+ * Return: int
+ */
+
+int num_dlistint(dlistint_t *f)
 {
-	dlistint_t *node = h;
-	int num = 0;
+	dlistint_t *seceted = f;
+	int stage = 0;
 
-	while (node)
+	while (seceted)
 	{
-		num += node->n;
-		node = node->next;
+		stage += seceted->n;
+		seceted = seceted->next;
 	}
 
-	return (num);
+	return (stage);
 }
